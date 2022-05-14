@@ -1,0 +1,44 @@
+/*!
+ * CustomTooltips
+ * A very simple and lightweight tooltips system created with vanilla JavaScript
+ *
+ * @version v1.0
+ * @author oscarcweb <rehr_roste@aleeas.com>
+ * @github https://github.com/oscarcweb/CustomTooltips
+ * @license MIT
+ */
+
+#tooltip-js {
+	/*font-size: 15px;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+	position: absolute;
+	display: none;
+	z-index: 99999;
+	color: rgb(33, 43, 54);
+	padding: .4rem 1rem;
+	background-color: #FFF;
+	box-shadow: rgb(145 158 171 / 24%) 0px 0px 2px 0px, rgb(145 158 171 / 24%) 0px 20px 40px -4px;
+    border: 1px solid rgba(145, 158, 171, 0.08);
+    max-width: 450px;
+	border-radius: 10px;
+}
+
+#tooltip-js::before {
+	top: -5px;
+	z-index: 1;
+	width: 12px;
+	left: 5px;
+	height: 12px;
+	content: "";
+	position: absolute;
+	border-radius: 0px 0px 4px;
+	transform: rotate(-135deg);
+	background: rgb(255, 255, 255);
+	border-right: 1px solid rgba(145, 158, 171, 0.12);
+	border-bottom: 1px solid rgba(145, 158, 171, 0.12);
+}
+
+#tooltip-js.arrow-left:before {
+	left: initial;
+	right: 5px;
+}
